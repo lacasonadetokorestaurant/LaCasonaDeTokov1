@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 
@@ -7,18 +8,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>La Casona De Toko</title>
     <!-- Scripts -->
-    <script src="js/jquery.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/baguetteBox.min.js"></script>
+    <script src="{% static 'js/jquery.slim.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/baguetteBox.min.js' %}"></script>
     <script src="https://kit.fontawesome.com/9d1c7031d8.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <!-- End-->
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/baguetteBox.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/baguetteBox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico'%}" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&Overpass&Rajdhani&Source+Serif+Pro&display=swap"
         rel="stylesheet">
     <!-- End-->
@@ -28,7 +29,7 @@
     <!-- Nav Bar -->
     <header id="navbar" class="navbar navbar-default navbar-expand-md navbar-dark">
         <div class="container-fluid">
-            <a href="index.html" class="navbar-brand"><img src="img/logo.png" alt=""></a>
+            <a href="index.html" class="navbar-brand"><img src="{% static 'img/logo.png' %}" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -40,7 +41,7 @@
                     <li class="nav-item"><a href="#p2" class="nav-link">Galeria</a></li>
                     <li class="nav-item"><a href="#p3" class="nav-link">Ubicacion</a></li>
                     <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
-                    <li class="nav-item"><a href="" class="nav-link btn btn-danger btn-lg">Login</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link btn btn-danger btn-lg">Login</a></li>
                 </ul>
             </div>
         </div>
@@ -142,179 +143,8 @@
     <!-- End-->
 
     <!-- Carta -->
-    <section id="carta">
-        <div class="container-fluid padding">
-            <div class="row carta text-center">
-                <div class="col-12">
-                    <h2 class="display-4">Carta</h2>
-                    <hr>
-                </div>
-            </div>
-
-            <div class="row carta-content">
-                <div class="col-12">
-                    <div class="carta-left">
-                        <nav class="nav nav-pills nav-fill mb-3">
-                            <a class="nav-item nav-link active" data-toggle="pill" href="#carne">Carne</a>
-                            <a class="nav-item nav-link" data-toggle="pill" href="#pesca">Pescado</a>
-                            <a class="nav-item nav-link" data-toggle="pill" href="#pollo">Pollo</a>
-                            <a class="nav-item nav-link" data-toggle="pill" href="#acomp">Acompanamiento</a>
-                            <a class="nav-item nav-link" data-toggle="pill" href="#ensal">Ensalada</a>
-                        </nav>
-
-                        <div class="tab-content">
-                            <div id="carne" class="tab-pane fade show active">
-                                <h3>Carne</h3>
-                                <ul>
-                                    <li>Lomo a lo Pobre <span>$ 5.990</span>
-                                        <hr>
-                                    </li>
-                                    
-                                    <li>Lomo c/ Salsa a la Mostaza <span>$ 5.200</span>
-                                        <hr>
-                                    </li>
-                                    
-                                    <li>Lomo c/ Salsa Champinon <span>$ 5.500</span>
-                                        <hr>
-                                    </li>
-                                    
-                                    <li>Lomo a la PLancha <span>$ 4.990</span>
-                                        <hr>
-                                    </li>
-                                   
-                                    <li>Carne Mechada <span>$ 4.990</span>
-                                        <hr>
-                                    </li>
-                                    
-                                    <li>Chorrillana <span>$ 6.990</span>
-                                        <hr>
-                                    </li>
-                                    
-                                </ul>
-                            </div>
-                            <div id="pesca" class="tab-pane fade">
-                                <h3>Pescado</h3>
-                                <ul>
-                                    <li>Trensado Salmon Reineta <span>$ 5.990</span>
-                                        <hr>
-                                    </li>
-                                    
-                                    <li>Salmon a la Plancha <span>$ 4.990</span>
-                                        <hr>
-                                    </li>
-                                    
-                                    <li>Salmon a la Mantequilla <span>$ 5.500</span>
-                                        <hr>
-                                    </li>
-                                    
-                                    <li>Salmon c/ Salsa de Marisco <span>$ 6.200</span>
-                                        <hr>
-                                    </li>
-                                    
-                                    <li>Reineta a la Plancha <span>$ 3.990</span>
-                                        <hr>
-                                    </li>
-                                   
-                                    <li>Reineta a las Hierbas <span>$ 4.500</span>
-                                        <hr>
-                                    </li>
-                                    
-                                </ul>
-                            </div>
-                            <div id="pollo" class="tab-pane fade">
-                                <h3>Pollo</h3>
-                                <ul>
-                                    <li>Pollo a la Plancha <span>$ 3.990</span>
-                                        <hr>
-                                    </li>
-                                    
-                                    <li>Pollo Relleno con Verduras <span>$ 4.200</span>
-                                        <hr>
-                                    </li>
-                    
-                                    <li>Pollo Relleno con Mariscos <span>$ 4.990</span>
-                                        <hr>
-                                    </li>
-                                    
-                                    <li>Pollo Asado<span>$ 5.990</span>
-                                        <hr>
-                                    </li>
-                                    
-                                    <li>Pollo al Horno <span>$ 4.990</span>
-                                        <hr>
-                                    </li>
-                                    
-                                    <li>Pollo Arverjado <span>$ 3.990</span>
-                                        <hr>
-                                    </li>
-                                    
-                                </ul>
-                            </div>
-                            <div id="acomp" class="tab-pane fade">
-                                <h3>Acompanamiento</h3>
-                                <ul>
-                                    <li>Arroz Blanco <span>$ 1.400</span>
-                                        <hr>
-                                    </li>
-                                    
-                                    <li>Arroz al Curry <span>$ 1.600</span>
-                                        <hr>
-                                    </li>
-                                    
-                                    <li>Arroz Arabe <span>$ 1.900</span>
-                                        <hr>
-                                    </li>
-                                    
-                                    <li>Pure Solo <span>$ 1.400</span>
-                                        <hr>
-                                    </li>
-                                    
-                                    <li>Pure Rustico <span>$ 1.900</span>
-                                        <hr>
-                                    </li>
-                                    
-                                    <li>Papas Fritas <span>$ 2.300</span>
-                                        <hr>
-                                    </li>
-                                    
-                                </ul>
-                            </div>
-                            <div id="ensal" class="tab-pane fade">
-                                <h3>Ensalada</h3>
-                                <ul>
-                                    <li>Ensalada a la Chilena <span>$ 1.900</span>
-                                        <hr>
-                                    </li>
-                                    
-                                    <li>Ensalada Surtida <span>$ 3.400</span>
-                                        <hr>
-                                    </li>
-                                    
-                                    <li>Ensalada Cesar <span>$ 4.900</span>
-                                        <hr>
-                                    </li>
-                                    
-                                    <li>Ensalada Vegetariana <span>$ 4.900</span>
-                                        <hr>
-                                    </li>
-                                    
-                                    <li>Ensalada Palmito Palta <span>$ 3.200</span>
-                                        <hr>
-                                    </li>
-                                    
-                                    <li>Ensalada Primavera<span>$ 4.200</span>
-                                        <hr>
-                                    </li>
-                                    
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-            </div>
-        </div>
-    </section>
+    {% block carta %}
+    {% endblock carta %}
     <!-- End-->
 
     <!-- Seccion Parallax -->
@@ -486,7 +316,7 @@
     <!-- End-->
 
     <!-- Scripts -->
-    <script src="js/script.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
     <!-- End-->
 </body>
 
