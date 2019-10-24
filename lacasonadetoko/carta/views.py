@@ -1,13 +1,15 @@
 from django.shortcuts import render
-from .models import Carta
+from .models import Carta, Categoria
 
 # Create your views here.
 
 
-def carta(request):
+def seccion_carta(request):
     carta = Carta.objects.all()
+    categoria = Categoria.objects.all()
 
     context = {
-        'carta': carta,
+        'carta' : carta,
+        'categoria' : categoria
     }
-    return render(request, 'carta/hola.html', context)
+    return render(request, 'carta/carta.html', context)
