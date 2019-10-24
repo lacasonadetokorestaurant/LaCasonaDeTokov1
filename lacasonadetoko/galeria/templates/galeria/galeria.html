@@ -2,5 +2,26 @@
 {% load static %}
 
 {% block galeria %}
-    <h1>Hola</h1>
+  <section id="galeria">
+      <div class="container-fluid padding">
+          <div class="row galeria text-center">
+              <div class="col-12">
+                  <h2 class="display-4">Galeria</h2>
+                  <hr>
+              </div>
+          </div>
+
+          <div class="gal-cont">
+              <div class="row no-padding">
+                {% for galeria in galeria %}
+                    <div class="col-sm-4">
+                      <div class="gal-img">
+                         <a class="lightbox" href="{{ galeria.imagen.url }}"><img src="{{ galeria.imagen.url }}" alt="{{galeria.titulo}}"></a>
+                        </div>
+                    </div>
+                {% endfor %}
+              </div>
+          </div>
+      </div>
+  </section>
 {% endblock galeria %}
