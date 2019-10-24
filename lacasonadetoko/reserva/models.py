@@ -17,4 +17,4 @@ class Reserva(models.Model):
         verbose_name_plural = 'Reservas'
 
     def __str__(self):
-        return self.name
+        return self.nombre

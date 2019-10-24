@@ -11,7 +11,7 @@ class Nosotros(models.Model):
         verbose_name_plural = 'Nosotros'
 
     def __str__(self):
-        return self.name
+        return self.descripcion
 
 
 class Contenido(models.Model):
@@ -25,4 +25,4 @@ class Contenido(models.Model):
         verbose_name_plural = 'Contenido'
 
     def __str__(self):
-        return self.name
+        return self.titulo

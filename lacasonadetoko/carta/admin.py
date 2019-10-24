@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Carta, Categoria
+from .models import Plato, Categoria
 
 # Register your models here.
-admin.site.register(Carta)
+admin.site.register(Plato)
 admin.site.register(Categoria)
