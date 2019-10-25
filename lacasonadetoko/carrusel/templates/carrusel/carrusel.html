@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block carrusel %}
+    <div id="carrusel" class="carousel slide carousel-fade" data-rode="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#carrusel" data-slide-to="0" class="active"></li>
+            <li data-target="#carrusel" data-slide-to="1"></li>
+            <li data-target="#carrusel" data-slide-to="2"></li>
+        </ul>
+        <div class="carousel-inner">
+            {% for carrusel in carrusel %}
+                <div class="carousel-item active">
+                    <img src="{{carrusel.imagen.url}}" alt="{{carrusel.titulo}}">
+                    <div class="carousel-caption">
+                        <h2 class="display-3">{{carrusel.antetitulo}} A</h2>
+                        <h1 class="display-1">{{carrusel.titulo}}</h1>
+                        <h3>{{carrusel.subtitulo}}</h3>
+                        <a href="reserva.html" class="btn btn-danger btn-lg">Reserva Tu Mesa</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <a class="carousel-control-prev" href="#carrusel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carrusel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+{% endblock carrusel %}
