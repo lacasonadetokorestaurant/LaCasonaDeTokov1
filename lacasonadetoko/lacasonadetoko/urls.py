@@ -20,10 +20,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('carrusel.urls', namespace='carrusel')),
-    # path('', include('carta.urls', namespace='carta')),
-    # path('', include('galeria.urls', namespace='galeria')),
-    # path('', include('nosotros.urls', namespace='nosotros')),
+    path('', include('home.urls', namespace='home')),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

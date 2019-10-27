@@ -41,79 +41,52 @@
                     <li class="nav-item"><a href="#p2" class="nav-link">Galeria</a></li>
                     <li class="nav-item"><a href="#p3" class="nav-link">Ubicacion</a></li>
                     <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link btn btn-danger btn-lg">Login</a></li>
+                    <li class="nav-item"><a href="" class="nav-link btn btn-danger btn-lg" data-toggle="modal"
+                            data-target="#ModalLoginForm">Login</a></li>
                 </ul>
             </div>
         </div>
     </header>
     <!-- End-->
 
-    <!-- Carrusel -->
-    {% block carrusel %}
-    {% endblock carrusel %}
-    <!-- End-->
-
-    <!-- Nosotros -->
-    {% block nosotros %}
-    {% endblock nosotros %}
-    <!-- End-->
-
-    <!-- Seccion Parallax -->
-    <div id="p1" class="parallax">
-        <div class="fixed-wrap">
-            <div class="fixed-1">
-            </div>
-        </div>
-    </div>
-    <!-- End-->
-
-    <!-- Carta -->
-    {% block carta %}
-    {% endblock carta %}
-    <!-- End-->
-
-    <!-- Seccion Parallax -->
-    <div id="p2" class="parallax">
-        <div class="fixed-wrap">
-            <div class="fixed-2">
-            </div>
-        </div>
-    </div>
-    <!-- End-->
-
-    <!-- Galeria -->
-    {% block galeria %}
-    {% endblock galeria %}
-    <!-- End-->
-
-    <!-- Seccion Parallax -->
-    <div id="p3" class="parallax">
-        <div class="fixed-wrap">
-            <div class="fixed-3">
-            </div>
-        </div>
-    </div>
-    <!-- End-->
-
-    <!-- Ubicacion -->
-    <section id="ubicacion">
-        <div class="container-fluid padding">
-            <div class="row ubicacion text-center">
-                <div class="col-12">
-                    <h2 class="display-4">Ubicacion</h2>
-                    <hr>
+    <!-- login-->
+    <div id="ModalLoginForm" class="modal fade">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title w-100 font-weight-bold d-flex justify-content-center">Login</h1>
                 </div>
-            </div>
-            <div class="row ubi-map visible">
-                <div class="col-md-12">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16202.754099577829!2d-70.66460200000002!3d-33.45224900000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c501408bc3d5%3A0x35f6afab29cafdee!2sAlmirante%20Latorre%20357%2C%20Santiago%2C%20Regi%C3%B3n%20Metropolitana!5e1!3m2!1ses-419!2scl!4v1567399633690!5m2!1ses-419!2scl">
-                    </iframe>
+                <div class="modal-body">
+                    <form role="form" method="POST" action="">
+                        <input type="hidden" name="_token" value="">
+                        <div class="form-group">
+                            <label class="control-label">Nombre de usuario</label>
+                            <div>
+                                <input type="text" class="form-control input-lg" name="usuario" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Contraseña</label>
+                            <div>
+                                <input type="password" class="form-control input-lg" name="password">
+                            </div>
+                        </div>
+                        <div class="form-group d-flex justify-content-center">
+                            <div>
+                                <button type="submit" class="btn btn-danger btn-md ">Iniciar sesion</button>
+
+                                <a class="btn btn-link" href="">Recuperar contraseña</a>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-            </div>
-        </div>
-    </section>
-    <!-- End-->
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <!-- end login -->
+
+    {% block content %}
+    {% endblock content %}
 
     <!-- Contacto -->
     <section id="contacto">
