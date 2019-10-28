@@ -1,2 +1,0 @@
-# LA CASONA DE TOKO WEBPAGE
-Front-End v1.0
