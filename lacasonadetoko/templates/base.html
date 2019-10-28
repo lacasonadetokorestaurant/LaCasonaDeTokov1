@@ -1,0 +1,148 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>La Casona De Toko</title>
+    <!-- Scripts -->
+    <script src="{% static 'js/jquery.slim.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/baguetteBox.min.js' %}"></script>
+    <script src="https://kit.fontawesome.com/9d1c7031d8.js"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- End-->
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/baguetteBox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico'%}" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&Overpass&Rajdhani&Source+Serif+Pro&display=swap"
+        rel="stylesheet">
+    <!-- End-->
+</head>
+
+<body>
+    <!-- Nav Bar -->
+    <header id="navbar" class="navbar navbar-default navbar-expand-md navbar-dark">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand"><img src="{% static 'img/logo.png' %}" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse text-light" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                    <li class="nav-item"><a href="#p1" class="nav-link">Carta</a></li>
+                    <li class="nav-item"><a href="#p2" class="nav-link">Galeria</a></li>
+                    <li class="nav-item"><a href="#p3" class="nav-link">Ubicacion</a></li>
+                    <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
+                    <li class="nav-item"><a href="" class="nav-link btn btn-danger btn-lg" data-toggle="modal"
+                            data-target="#ModalLoginForm">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- End-->
+
+    <!-- login-->
+    <div id="ModalLoginForm" class="modal fade">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title w-100 font-weight-bold d-flex justify-content-center">Login</h1>
+                </div>
+                <div class="modal-body">
+                    <form role="form" method="POST" action="">
+                        <input type="hidden" name="_token" value="">
+                        <div class="form-group">
+                            <label class="control-label">Nombre de usuario</label>
+                            <div>
+                                <input type="text" class="form-control input-lg" name="usuario" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Contraseña</label>
+                            <div>
+                                <input type="password" class="form-control input-lg" name="password">
+                            </div>
+                        </div>
+                        <div class="form-group d-flex justify-content-center">
+                            <div>
+                                <button type="submit" class="btn btn-danger btn-md ">Iniciar sesion</button>
+
+                                <a class="btn btn-link" href="">Recuperar contraseña</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <!-- end login -->
+
+    {% block content %}
+    {% endblock content %}
+
+    <!-- Contacto -->
+    <section id="contacto">
+        <div class="container-fluid padding">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <hr class="light">
+                    <h5>Contacto</h5>
+                    <hr class="light">
+                    <p><i class="fas fa-phone"></i>(2) 2696 9181</p>
+                    <p><i class="fab fa-whatsapp"></i> +569-34204322</p>
+                    <p><i class="far fa-envelope"></i> casonadetoko@gmail.com</p>
+                </div>
+                <div class="col-md-4">
+                    <hr class="light">
+                    <h5>Horario</h5>
+                    <hr class="light">
+                    <p>Lunes a Sabado: 12:00 a 17:00 hrs</p>
+                    <p>Domingo: Cerrado</p>
+                </div>
+                <div class="col-md-4 social">
+                    <hr class="light">
+                    <h5>Siguenos En:</h5>
+                    <hr class="light">
+                    <a href="https://www.facebook.com/LaCasonaDeToko"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://twitter.com/casonadetoko"><i class="fab fa-twitter-square"></i></a>
+                    <a href="https://www.instagram.com/lacasonadetoko/"><i class="fab fa-instagram"></i></a>
+                    <a
+                        href="https://www.tripadvisor.cl/Restaurant_Review-g294305-d7083454-Reviews-La_Casona_de_Toko-Santiago_Santiago_Metropolitan_Region.html">
+                        <i class="fab fa-tripadvisor"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End-->
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="row text-center align-items-center">
+                <div class="col-12">
+                    <h6>La Casona de Toko | Todos los derechos reservados © 2019</h6>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End-->
+
+    <!-- Boton Scroll Up-->
+    <button onclick="topFunction()" id="myBtn" title="Go to top" class="fas fa-chevron-up"></button>
+    <!-- End-->
+
+    <!-- Scripts -->
+    <script src="{% static 'js/script.js' %}"></script>
+    <!-- End-->
+</body>
+
+</html>

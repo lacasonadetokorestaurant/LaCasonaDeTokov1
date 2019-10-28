@@ -40,11 +40,49 @@
                     <li class="nav-item"><a href="#p2" class="nav-link">Galeria</a></li>
                     <li class="nav-item"><a href="#p3" class="nav-link">Ubicacion</a></li>
                     <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
+                    <li class="nav-item"><a href="" class="nav-link btn btn-danger btn-lg" data-toggle="modal"
+                            data-target="#ModalLoginForm">Login</a></li>
                 </ul>
             </div>
         </div>
     </header>
     <!-- End-->
+
+    <!-- login-->
+    <div id="ModalLoginForm" class="modal fade">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title w-100 font-weight-bold d-flex justify-content-center">Login</h1>
+                </div>
+                <div class="modal-body">
+                    <form role="form" method="POST" action="">
+                        <input type="hidden" name="_token" value="">
+                        <div class="form-group">
+                            <label class="control-label">Nombre de usuario</label>
+                            <div>
+                                <input type="text" class="form-control input-lg" name="usuario" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Contraseña</label>
+                            <div>
+                                <input type="password" class="form-control input-lg" name="password">
+                            </div>
+                        </div>
+                        <div class="form-group d-flex justify-content-center">
+                            <div>
+                                <button type="submit" class="btn btn-danger btn-md ">Iniciar sesion</button>
+
+                                <a class="btn btn-link" href="">Recuperar contraseña</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <!-- end login -->
 
     <!-- Carrusel -->
     <div id="carrusel" class="carousel slide carousel-fade" data-rode="carousel">
@@ -168,27 +206,27 @@
                                     <li>Lomo a lo Pobre <span>$ 5.990</span>
                                         <hr>
                                     </li>
-                                    
+
                                     <li>Lomo c/ Salsa a la Mostaza <span>$ 5.200</span>
                                         <hr>
                                     </li>
-                                    
+
                                     <li>Lomo c/ Salsa Champinon <span>$ 5.500</span>
                                         <hr>
                                     </li>
-                                    
+
                                     <li>Lomo a la PLancha <span>$ 4.990</span>
                                         <hr>
                                     </li>
-                                   
+
                                     <li>Carne Mechada <span>$ 4.990</span>
                                         <hr>
                                     </li>
-                                    
+
                                     <li>Chorrillana <span>$ 6.990</span>
                                         <hr>
                                     </li>
-                                    
+
                                 </ul>
                             </div>
                             <div id="pesca" class="tab-pane fade">
@@ -197,27 +235,27 @@
                                     <li>Trensado Salmon Reineta <span>$ 5.990</span>
                                         <hr>
                                     </li>
-                                    
+
                                     <li>Salmon a la Plancha <span>$ 4.990</span>
                                         <hr>
                                     </li>
-                                    
+
                                     <li>Salmon a la Mantequilla <span>$ 5.500</span>
                                         <hr>
                                     </li>
-                                    
+
                                     <li>Salmon c/ Salsa de Marisco <span>$ 6.200</span>
                                         <hr>
                                     </li>
-                                    
+
                                     <li>Reineta a la Plancha <span>$ 3.990</span>
                                         <hr>
                                     </li>
-                                   
+
                                     <li>Reineta a las Hierbas <span>$ 4.500</span>
                                         <hr>
                                     </li>
-                                    
+
                                 </ul>
                             </div>
                             <div id="pollo" class="tab-pane fade">
@@ -226,27 +264,27 @@
                                     <li>Pollo a la Plancha <span>$ 3.990</span>
                                         <hr>
                                     </li>
-                                    
+
                                     <li>Pollo Relleno con Verduras <span>$ 4.200</span>
                                         <hr>
                                     </li>
-                    
+
                                     <li>Pollo Relleno con Mariscos <span>$ 4.990</span>
                                         <hr>
                                     </li>
-                                    
+
                                     <li>Pollo Asado<span>$ 5.990</span>
                                         <hr>
                                     </li>
-                                    
+
                                     <li>Pollo al Horno <span>$ 4.990</span>
                                         <hr>
                                     </li>
-                                    
+
                                     <li>Pollo Arverjado <span>$ 3.990</span>
                                         <hr>
                                     </li>
-                                    
+
                                 </ul>
                             </div>
                             <div id="acomp" class="tab-pane fade">
@@ -255,27 +293,27 @@
                                     <li>Arroz Blanco <span>$ 1.400</span>
                                         <hr>
                                     </li>
-                                    
+
                                     <li>Arroz al Curry <span>$ 1.600</span>
                                         <hr>
                                     </li>
-                                    
+
                                     <li>Arroz Arabe <span>$ 1.900</span>
                                         <hr>
                                     </li>
-                                    
+
                                     <li>Pure Solo <span>$ 1.400</span>
                                         <hr>
                                     </li>
-                                    
+
                                     <li>Pure Rustico <span>$ 1.900</span>
                                         <hr>
                                     </li>
-                                    
+
                                     <li>Papas Fritas <span>$ 2.300</span>
                                         <hr>
                                     </li>
-                                    
+
                                 </ul>
                             </div>
                             <div id="ensal" class="tab-pane fade">
@@ -284,27 +322,27 @@
                                     <li>Ensalada a la Chilena <span>$ 1.900</span>
                                         <hr>
                                     </li>
-                                    
+
                                     <li>Ensalada Surtida <span>$ 3.400</span>
                                         <hr>
                                     </li>
-                                    
+
                                     <li>Ensalada Cesar <span>$ 4.900</span>
                                         <hr>
                                     </li>
-                                    
+
                                     <li>Ensalada Vegetariana <span>$ 4.900</span>
                                         <hr>
                                     </li>
-                                    
+
                                     <li>Ensalada Palmito Palta <span>$ 3.200</span>
                                         <hr>
                                     </li>
-                                    
+
                                     <li>Ensalada Primavera<span>$ 4.200</span>
                                         <hr>
                                     </li>
-                                    
+
                                 </ul>
                             </div>
                         </div>
