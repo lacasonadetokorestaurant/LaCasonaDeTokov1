@@ -102,8 +102,13 @@
                     <div class="carta-left">
                         <nav class="nav nav-pills nav-fill mb-3">
                             {% for tipo_plato in tipo_plato %}
-                            <a class="nav-item nav-link " data-toggle="pill"
-                                href="#{{tipo_plato}}">{{tipo_plato.nombre}}</a>
+                                {% if tipo_plato.nombre == "CARNE" %}
+                                    <a class="nav-item nav-link active" data-toggle="pill"
+                                        href="#{{tipo_plato}}">{{tipo_plato.nombre}}</a>
+                                {% else %}
+                                    <a class="nav-item nav-link" data-toggle="pill"
+                                        href="#{{tipo_plato}}">{{tipo_plato.nombre}}</a>
+                                {% endif %}
                             {% endfor %}
                         </nav>
 
