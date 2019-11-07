@@ -114,18 +114,33 @@
 
                         <div class="tab-content">
                             {% for tipo_plato in tipo_plato %}
-                            <div id="{{tipo_plato}}" class="tab-pane fade show">
-                                <h3>{{tipo_plato.nombre}}</h3>
-                                {% for plato in plato %}
-                                {% if plato.tipo_plato == tipo_plato %}
-                                <ul>
-                                    <li>{{plato.nombre}} <span>$ {{plato.precio|intcomma}}</span>
-                                        <hr>
-                                    </li>
-                                </ul>
+                                {% if tipo_plato.nombre == "CARNE" %}
+                                    <div id="{{tipo_plato}}" class="tab-pane fade show active">
+                                        <h3>{{tipo_plato.nombre}}</h3>
+                                        {% for plato in plato %}
+                                        {% if plato.tipo_plato == tipo_plato %}
+                                        <ul>
+                                            <li>{{plato.nombre}} <span>$ {{plato.precio|intcomma}}</span>
+                                                <hr>
+                                            </li>
+                                        </ul>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    <div id="{{tipo_plato}}" class="tab-pane fade show">
+                                        <h3>{{tipo_plato.nombre}}</h3>
+                                        {% for plato in plato %}
+                                        {% if plato.tipo_plato == tipo_plato %}
+                                        <ul>
+                                            <li>{{plato.nombre}} <span>$ {{plato.precio|intcomma}}</span>
+                                                <hr>
+                                            </li>
+                                        </ul>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </div>
                                 {% endif %}
-                                {% endfor %}
-                            </div>
                             {% endfor %}
                         </div>
                     </div>
