@@ -1,2 +1,2 @@
-![](static/img/logo.png)
+![](static/img/logo-readme.png)
 ---
