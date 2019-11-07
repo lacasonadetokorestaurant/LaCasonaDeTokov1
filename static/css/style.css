@@ -387,6 +387,9 @@ hr.light {
     background-color: #9c1717;
 }
 
+#ModalLoginForm .rec-contr {
+    font-size: 0.7rem;
+}
 
 /*Media Queries*/
 @media (max-width: 1425px) {
