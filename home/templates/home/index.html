@@ -102,7 +102,7 @@
                     <div class="carta-left">
                         <nav class="nav nav-pills nav-fill mb-3">
                             {% for tipo_plato in tipo_plato %}
-                                {% if tipo_plato.nombre == "CARNE" %}
+                                {% if forloop.first %}
                                     <a class="nav-item nav-link active" data-toggle="pill"
                                         href="#{{tipo_plato}}">{{tipo_plato.nombre}}</a>
                                 {% else %}
@@ -114,7 +114,7 @@
 
                         <div class="tab-content">
                             {% for tipo_plato in tipo_plato %}
-                                {% if tipo_plato.nombre == "CARNE" %}
+                                {% if forloop.first %}
                                     <div id="{{tipo_plato}}" class="tab-pane fade show active">
                                         <h3>{{tipo_plato.nombre}}</h3>
                                         {% for plato in plato %}
