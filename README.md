@@ -5,4 +5,4 @@
 ## General
 Este proyecto consiste en una página web para un restaurant de comida típica chilena ubicado en Santiago de Chile.
 
-![front-page](docs/resource/img/homepage.png)
+![homepage](docs/resource/img/homepage.png)
