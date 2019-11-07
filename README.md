@@ -1,2 +1,2 @@
-![](static/img/logo-readme.png)
+![](docs/resources/img/logo-readme.png)
 ---
