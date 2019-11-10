@@ -1,4 +1,4 @@
-body {
+#reserva {
     background: #181818;
     color: #fff;
     line-height: 1.6;
@@ -151,16 +151,6 @@ select {
     background: rgba(255, 255, 255, .3)
 }
 
-
-#footer {
-    overflow: hidden;
-    background: #000;
-}
-
-#footer p {
-    font-size: 16px;
-    /* text-transform: uppercase; */
-}
 
 /* LARGE SIZE */
 @media(min-width: 700px) {

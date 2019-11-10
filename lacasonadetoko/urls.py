@@ -21,7 +21,13 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls', namespace='home')),
+    path('reservas', include('reservacion.urls', namespace='reserva')),
+
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+admin.site.site_header = "La Casona de Toko - AdminPanel"
+admin.site.site_title = "Restaurant App Admin"
+admin.site.site_index_title = "Bienvenido a la Casona de Toko Admin Panel"

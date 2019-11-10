@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- Formulario-->
+<section id="reserva">
+    <div class="container">
+        <h1 class="form-title">Reserva con <span>Nosotros</span></h1>
+        <div class="contact-wrapper animated bounceInUp">
+            <div class="contact-form">
+                <form action="" method="POST" class="formulario">
+                    {% csrf_token %}
+                    <div class="form-group form-cont">
+                        <label for="nombre">Nombre</label>
+                        {{form.nombre}}
+                    </div>
+                    <div class="form-group form-cont">
+                        <label for="email">Email </label>
+                        {{form.email}}
+                    </div>
+                    <div class="form-group form-cont">
+                        <label for="phone">Telefono</label>
+                        {{form.telefono}}
+                    </div>
+                    <div class="form-group form-cont">
+                        <label for="cantidad">Cantidad de Personas</label>
+                        {{form.cantidad_personas}}
+                    </div>
+                    <div class="form-group form-cont">
+                        <label for="hora">Hora</label>
+                        {{form.hora_reserva}}
+                    </div>
+                    <div class="form-group form-cont">
+                        <label for="fecha">Fecha</label>
+                        {{form.fecha}}
+                    </div>
+                    <div class="block form-group form-cont">
+                        <label>Orservación</label>
+                        {{form.observacion}}
+                    </div>
+                    <span class="block">
+                        <button id="boton" type="submit">Reservar Ahora</button>
+                    </span>
+                </form>
+
+            </div>
+
+            <div class="contact-info text-center">
+                <h2>La Casona <span>de Toko</span></h2>
+                <hr class="light">
+                <img src="{% static 'img/reserva/reserva1.jpg' %}" alt="img-reserva">
+                <hr class="light">
+                <p>Encuentrados de Lunes a Sabado de 12:00 a 17:00 hrs</p>
+                <hr class="light">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End-->
+<script src="{% static 'js/valida.js' %}"></script>
+
+{% endblock %}
