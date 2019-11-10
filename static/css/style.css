@@ -144,9 +144,14 @@ button:focus {
     border-bottom: 2px solid #A62727;
 }
 
+#nosotros,
+#galeria{
+    background: #ffffff;
+}
+
 #carta,
 #ubicacion {
-    background: rgb(224, 224, 224);
+    background: rgb(190, 15, 15);
 }
 
 .nosotros,
@@ -387,9 +392,6 @@ hr.light {
     background-color: #9c1717;
 }
 
-#ModalLoginForm .rec-contr {
-    font-size: 0.7rem;
-}
 
 /*Media Queries*/
 @media (max-width: 1425px) {
@@ -486,7 +488,7 @@ hr.light {
         top: 45%;
     }
 
-    .gal-img img {  
+    .gal-img img {
         width: 680px;
         height: 200px;
     }
@@ -630,7 +632,7 @@ hr.light {
     p {
         font-size: 0.65rem;
     }
-    
+
     .display-4 {
         font-size: 110%;
     }
@@ -678,3 +680,4 @@ hr.light {
 [class*="col-"] {
     padding: 1rem;
 }
+

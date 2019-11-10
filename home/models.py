@@ -22,6 +22,7 @@ class Contenido(models.Model):
     class Meta:
         verbose_name = 'Contenido'
         verbose_name_plural = 'Contenido'
+        ordering = ["-titulo"]
 
     def __str__(self):
         return self.titulo
@@ -32,10 +33,12 @@ class Plato(models.Model):
     precio = models.IntegerField(default=0)
     tipo_plato = models.ForeignKey(
         'TipoPlato', on_delete=models.SET_NULL, null=True)
+    
 
     class Meta:
         verbose_name = 'Plato'
         verbose_name_plural = 'Platos'
+        ordering = ["tipo_plato"]
 
     def __str__(self):
         return self.nombre
@@ -47,6 +50,7 @@ class TipoPlato(models.Model):
     class Meta:
         verbose_name = 'Tipo de Plato'
         verbose_name_plural = 'Tipos de Plato'
+        
 
     def __str__(self):
         return self.nombre
@@ -60,6 +64,7 @@ class Galeria(models.Model):
     class Meta:
         verbose_name = 'Galeria'
         verbose_name_plural = 'Galeria'
+        ordering = ["-titulo"]
 
     def __str__(self):
         return self.titulo
