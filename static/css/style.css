@@ -2,6 +2,7 @@ html,
 body {
     height: 100%;
     width: 100%;
+    background: #ffffff;
     font-family: 'Poppins', sans-serif;
     color: #222;
     scroll-behavior: smooth;
@@ -151,7 +152,7 @@ button:focus {
 
 #carta,
 #ubicacion {
-    background: rgb(190, 15, 15);
+    background: #E0E0E0;
 }
 
 .nosotros,
@@ -307,6 +308,11 @@ hr.light {
 
 #footer h6 {
     color: rgb(170, 169, 164);
+}
+
+.navbar-nav .nav-item .btn-group a {
+    font-size: 0.9rem !important;
+    color: #333333;
 }
 
 /*Parallax*/

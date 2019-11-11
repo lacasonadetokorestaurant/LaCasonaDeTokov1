@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <section id="login">
+       <div class="container">
+           <div class="row">
+               <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                   <div class="card card-signin my-5">
+                       <div class="card-body">
+                           <h5 class="card-title text-center">Iniciar Sesion</h5>
+                           <form class="form-signin" method="POST">
+                                {% csrf_token %}
+                                <div class="form-label-group">
+                                    <td type="text" id="inputUser" class="form-control" placeholder="username" autofocus>{{ form.username }}</td>
+                                    <label for="inputUser">Usuario</label>
+                                </div>
+
+                                <div class="form-label-group">
+                                    <td type="password" id="inputPassword" class="form-control"placeholder="password">{{ form.password }}</td>
+                                    <label for="inputPassword">Contrasena</label>
+                                </div>
+
+                                {% if request.GET.next %}
+                                <input type="hidden" name="next" value="{{ request.GET.next }}">
+                                {% endif %}
+                                <button class="btn btn-lg btn-danger btn-block text-uppercase" type="submit">Iniciar Sesion</button>
+                                <hr class="my-4">
+                                <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i
+                                        class="fab fa-google mr-2"></i> Sign in with Google</button>
+                                <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i
+                                        class="fab fa-facebook-f mr-2"></i> Sign in with Facebook</button>
+                           </form>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+    </section>
+{% endblock content %}

@@ -2,8 +2,6 @@ from django.db import models
 from django.core.validators import MinValueValidator
 import django
 from django.conf import settings
-from django.contrib.auth.models import User
-from django.contrib.auth.models import BaseUserManager, AbstractUser
 
 # Create your models here.
 
@@ -12,7 +10,7 @@ class Reservacion(models.Model):
     email = models.EmailField(blank=False, verbose_name="Correo Electronico")
     telefono = models.IntegerField(blank=False, verbose_name="Celular")
     cantidad_personas = models.IntegerField(validators=[MinValueValidator(1)],default=0,blank=False, verbose_name="Cantidad de personas")
-    hora_reserva = models.TimeField(verbose_name="Nombre")
+    hora_reserva = models.TimeField()
     fecha = models.DateField()
     observacion = models.TextField(blank=True)
     estado_choices = (
