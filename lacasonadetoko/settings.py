@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
+    'crispy_forms',
     'home.apps.HomeConfig',
     'reservacion.apps.ReservacionConfig',
     'accounts.apps.AccountsConfig',
@@ -129,4 +130,18 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-LOGOUT_REDIRECT_URL = 'home:home'
+# Login Settings
+LOGIN_REDIRECT_URL = 'home:home'
+LOGIN_URL = 'login'
+LOGOUT_REDIRECT_URL = 'login'
+
+#Crispy Template
+CRISPY_TEMPLATE_PACK='bootstrap4'
+
+#Email Settings
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'  # servicio de correo smtp
+EMAIL_HOST_USER = 'lacasonadetoko@gmail.com'  # id de correo electrónico
+EMAIL_HOST_PASSWORD = 'lacasona1234'  # password
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

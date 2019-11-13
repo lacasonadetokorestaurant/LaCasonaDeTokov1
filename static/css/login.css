@@ -9,7 +9,20 @@
 }
 
 .card {
-    background: #222222;
+    background: #E0E0E0;
+}
+
+.card h5,
+.card label {
+    color: #bd2130;
+}
+
+div a {
+    color: #bd2130;
+}
+
+div a:hover {
+    color: #851F1F;
 }
 
 .card-signin {
