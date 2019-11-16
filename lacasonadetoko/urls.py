@@ -21,6 +21,7 @@ from django.conf.urls.static import static
 from accounts import views as user_views
 
 urlpatterns = [
+    path('jet/', include('jet.urls', 'jet')),
     path('admin/', admin.site.urls, name='admin'),
     path('', include('home.urls', namespace='home')),
     path('reservas/', include('reservacion.urls', namespace='reserva')),

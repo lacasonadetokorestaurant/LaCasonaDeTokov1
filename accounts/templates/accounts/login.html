@@ -14,22 +14,24 @@
                             {% csrf_token %}
                             <div class="form-label-group">
                                 {{form|crispy}}
-                            <br>
-                            {% if request.GET.next %}
-                            <input type="hidden" name="next" value="{{ request.GET.next }}">
-                            {% endif %}
-                            <button class="btn btn-lg btn-danger btn-block text-uppercase" type="submit">Iniciar Sesion</button>
+                                <br>
+                                {% if request.GET.next %}
+                                    <input type="hidden" name="next" value="{{ request.GET.next }}">
+                                {% endif %}
+                                <button class="btn btn-lg btn-danger btn-block text-uppercase" type="submit">Iniciar
+                                    Sesion</button>
 
-                            <div class="text-center">
-                                <a class="small" href="{% url 'password_reset' %}">¿Has olvidado tu contrasena?</a>
-                            </div>
-                            {% comment %} <hr class="my-4">
-                            <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i
-                                    class="fab fa-google mr-2"></i> Iniciar con Google
-                            </button>
-                            <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i
-                                    class="fab fa-facebook-f mr-2"></i> Iniciar con Facebook
-                            </button> {% endcomment %}
+                                <div class="text-center">
+                                    <a class="small" href="{% url 'password_reset' %}">¿Has olvidado tu contrasena?</a>
+                                </div>
+                                {% comment %}
+                                <hr class="my-4">
+                                <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i
+                                        class="fab fa-google mr-2"></i> Iniciar con Google
+                                </button>
+                                <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i
+                                        class="fab fa-facebook-f mr-2"></i> Iniciar con Facebook
+                                </button> {% endcomment %}
                         </form>
                     </div>
                 </div>

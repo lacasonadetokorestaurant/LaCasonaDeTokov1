@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jet',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -74,6 +75,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'lacasonadetoko.wsgi.application'
 
+SUIT_CONFIG = {
+    #header
+    'ADMIN_NAME': 'La Casona de Toko - AdminPanel',
+    'HEADER_DATE_FORMAT': 'l, j. F Y',
+    'HEADER_TIME_FORMAT': 'H:i',
+}
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
