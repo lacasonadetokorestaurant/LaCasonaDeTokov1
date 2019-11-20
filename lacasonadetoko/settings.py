@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'jet',
+    'unittest',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,7 +44,14 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'reservacion.apps.ReservacionConfig',
     'accounts.apps.AccountsConfig',
+    'rest_framework',
+    'api',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -153,3 +161,4 @@ EMAIL_HOST_USER = 'lacasonadetoko@gmail.com'  # id de correo electrónico
 EMAIL_HOST_PASSWORD = 'lacasona1234'  # password
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+

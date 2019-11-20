@@ -2,6 +2,7 @@ from django import forms
 from .models import Reservacion
 import datetime
 
+
 class DateInput(forms.DateInput):
     input_type = "date"
 
