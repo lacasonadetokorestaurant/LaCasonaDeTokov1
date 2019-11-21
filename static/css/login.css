@@ -17,11 +17,11 @@
     color: #bd2130;
 }
 
-div a {
+.texto a {
     color: #bd2130;
 }
 
-div a:hover {
+.texto a:hover {
     color: #851F1F;
 }
 
