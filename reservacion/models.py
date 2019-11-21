@@ -1,6 +1,7 @@
 import django
 from django.db import models
 from django.core.validators import MinValueValidator
+from phonenumber_field.modelfields import PhoneNumberField
 from django.conf import settings
 
 # Create your models here.
@@ -8,7 +9,7 @@ from django.conf import settings
 class Reservacion(models.Model):
     nombre = models.CharField(max_length = 50,blank=False,default='', verbose_name="Nombre")
     email = models.EmailField(blank=False, verbose_name="Correo Electronico")
-    telefono = models.IntegerField(blank=False, verbose_name="Celular")
+    telefono = PhoneNumberField()
     cantidad_personas = models.IntegerField(validators=[MinValueValidator(1)],default=0,blank=False, verbose_name="Cantidad de personas")
     hora_reserva = models.TimeField()
     fecha = models.DateField()
