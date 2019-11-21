@@ -29,10 +29,10 @@ class Contenido(models.Model):
 
 # SECCION CARTA
 class Plato(models.Model):
-    nombre = models.CharField(max_length=50)
-    precio = models.IntegerField(default=0)
+    nombre = models.CharField(max_length=50, verbose_name='Nombre del Plato')
+    precio = models.IntegerField(default=0, verbose_name='Precio')
     tipo_plato = models.ForeignKey(
-        'TipoPlato', on_delete=models.SET_NULL, null=True)
+        'TipoPlato', on_delete=models.SET_NULL, null=True, verbose_name='Tipo de Plato')
     
 
     class Meta:
@@ -45,7 +45,7 @@ class Plato(models.Model):
 
 
 class TipoPlato(models.Model):
-    nombre = models.CharField(max_length=50)
+    nombre = models.CharField(max_length=50, verbose_name='Tipo de Plato')
 
     class Meta:
         verbose_name = 'Tipo de Plato'

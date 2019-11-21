@@ -10,9 +10,9 @@ class Reservacion(models.Model):
     nombre = models.CharField(max_length = 50,blank=False,default='', verbose_name="Nombre")
     email = models.EmailField(blank=False, verbose_name="Correo Electronico")
     telefono = PhoneNumberField()
-    cantidad_personas = models.IntegerField(validators=[MinValueValidator(1)],default=0,blank=False, verbose_name="Cantidad de personas")
+    cantidad_personas = models.IntegerField(validators=[MinValueValidator(1)],default=0,blank=False, verbose_name="Cantidad de Personas")
     hora_reserva = models.TimeField()
-    fecha = models.DateField()
+    fecha = models.DateField(verbose_name="Fecha")
     observacion = models.TextField(blank=True)
     estado_choices = (
         ('CONFIRMADA', 'Confirmada'),
@@ -20,7 +20,7 @@ class Reservacion(models.Model):
         ('REALIZADA', 'Realizada'),
         ('CANCELADA', 'Candelada'),
     )
-    estado = models.CharField(max_length=30, choices=estado_choices, default='NO_CONFIRMADA')
+    estado = models.CharField(max_length=30, choices=estado_choices, default='NO_CONFIRMADA', verbose_name="Estado")
     motivo = models.TextField(blank=True)
 
 
