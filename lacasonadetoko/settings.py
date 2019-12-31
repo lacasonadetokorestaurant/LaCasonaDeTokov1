@@ -9,6 +9,8 @@ https://docs.djangoproject.com/en/2.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
+from dotenv import load_dotenv
+load_dotenv()
 
 import os
 
@@ -20,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '@deda%&2+i6g-g)^^*n8@*=t0!v@+w!fq6!%lotrbm!y#&sf-h'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -156,8 +158,8 @@ CRISPY_TEMPLATE_PACK='bootstrap4'
 #Email Settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'  # servicio de correo smtp
-EMAIL_HOST_USER = 'lacasonadetoko@gmail.com'  # id de correo electrónico
-EMAIL_HOST_PASSWORD = 'lacasona1234'  # password
+EMAIL_HOST_USER = os.getenv('EMAIL_USER')  # id de correo electrónico
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASS')   # password
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 

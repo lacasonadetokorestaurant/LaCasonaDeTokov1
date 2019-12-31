@@ -2,7 +2,7 @@ import django
 from django.db import models
 from django.core.validators import MinValueValidator
 from phonenumber_field.modelfields import PhoneNumberField
-from django.conf import settings
+
 
 # Create your models here.
 
